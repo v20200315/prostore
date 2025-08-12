@@ -84,3 +84,4 @@ coverage/
 .next.cache/
 *.swp
 *.swo
+/.idea/
