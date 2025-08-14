@@ -85,3 +85,5 @@ coverage/
 *.swp
 *.swo
 /.idea/
+
+/lib/generated/prisma
