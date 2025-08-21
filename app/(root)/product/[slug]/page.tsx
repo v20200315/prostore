@@ -1,14 +1,12 @@
-import ProductImages from "@/components/shared/product/product-images";
-import ProductPrice from "@/components/shared/product/product-price";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { getProductBySlug } from "@/lib/actions/product.action";
-import { notFound } from "next/navigation";
+import ProductImages from '@/components/shared/product/product-images';
+import ProductPrice from '@/components/shared/product/product-price';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { getProductBySlug } from '@/lib/actions/product.action';
+import { notFound } from 'next/navigation';
 
-const ProductDetailPage = async (props: {
-  params: Promise<{ slug: string }>;
-}) => {
+const ProductDetailPage = async (props: { params: Promise<{ slug: string }> }) => {
   const { slug } = await props.params;
   const product = await getProductBySlug(slug);
   if (!product) notFound();
